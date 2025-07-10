@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>Student Record Manager</h2>
+<button id="create-student">Create</button>
+<select id="sort">
+   <option value="">Sort By</option>
+  <option value="age">Sort by Age (ascending)</option>
+  <option value="score">Sort by Score (descending) </option>
+</select>
+<div id="stats" class="stats-box">
+  Total Students: <span id="total-count">0</span> |
+  Average Score: <span id="avg-score">0</span>
+</div>
+
+<!-- Form Card -->
+<div class="form-container">
+  <div class="form-card">
+    <h3>Create Student</h3>
+    <form id="student-form">
+      <div class="form-group">
+        <label for="studentName">Name</label>
+        <input type="text" name="studentName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="batch">Batch</label>
+        <input type="text" name="batch" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="score">Score</label>
+        <input type="number" name="score" min="0" max="100" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+    <input type="text" id="search-input" placeholder="Search by name..." />
+    <div class="disple-user">
+      <h3>Student List</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Batch</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+ 
+
+    <p class="err"></p>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
+
